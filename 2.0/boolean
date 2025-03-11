@@ -10,6 +10,7 @@ if ('') {
   console.log('true');//自动将''转为false
 }
 // 没有任何输出
+
 if ([]) {
   console.log('true');
 }
