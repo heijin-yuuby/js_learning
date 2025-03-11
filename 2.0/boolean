@@ -1,0 +1,21 @@
+/*
+undefined
+null
+false
+0
+NaN
+""或''都转为false
+*/
+if ('') {
+  console.log('true');//自动将''转为false
+}
+// 没有任何输出
+if ([]) {
+  console.log('true');
+}
+// true
+
+if ({}) {
+  console.log('true');
+}
+// true

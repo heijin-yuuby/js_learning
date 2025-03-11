@@ -1,0 +1,5 @@
+var o = {};
+var a = [];
+
+o instanceof Array // false
+a instanceof Array // true，区分数组和对象
