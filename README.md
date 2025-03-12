@@ -4,14 +4,14 @@ This repository contains my JavaScript learning journey, including various examp
 
 ## Directory Structure
 
-- `1.0/`: Basic JavaScript concepts
+- `basic_grammar/`: Basic JavaScript concepts
   - Control flow (if-else, loops)
   - Variables and blocks
   - Switch statements
   - Break and continue statements
 
-- `2.0/`: Advanced JavaScript concepts
-  - Data types
+- `data_type/`: data type of JavaScript
+  - overview
   - Type checking
   - Null and undefined
   - Integers and floating-point numbers
