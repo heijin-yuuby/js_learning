@@ -1,0 +1,41 @@
+/*implication*/
+// 场景一
+console.log(Math.pow(2, 1024))
+// Infinity
+
+// 场景二
+0 / 0 // NaN
+1 / 0 // Infinity
+
+Infinity === -Infinity // false
+1 / -0 // -Infinity
+-1 / -0 // Infinity
+
+Infinity > 1000 // true
+-Infinity < -1000 // true
+
+Infinity > NaN // false
+-Infinity > NaN // false
+/* smaller than all value but bigger than NaN*/
+Infinity < NaN // false
+-Infinity < NaN // false
+/* operational rlues(Meet the mathematical calculation rules for infinity.) */
+5 * Infinity // Infinity
+5 - Infinity // -Infinity
+Infinity / 5 // Infinity
+5 / Infinity // 0
+0 * Infinity // NaN
+0 / Infinity // 0
+Infinity / 0 // Infinity
+Infinity + Infinity // Infinity
+Infinity * Infinity // Infinity
+Infinity - Infinity // NaN
+Infinity / Infinity // NaN
+null * Infinity // NaN
+null / Infinity // 0
+Infinity / null // Infinity
+undefined + Infinity // NaN
+undefined - Infinity // NaN
+undefined * Infinity // NaN
+undefined / Infinity // NaN
+Infinity / undefined // NaN

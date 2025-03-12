@@ -1,0 +1,20 @@
+5 - 'x' // NaN
+/*以下是数值给得不合理*/
+Math.acos(2) // NaN
+Math.log(-1) // NaN
+Math.sqrt(-1) // NaN
+0 / 0 // NaN
+
+/*type*/
+typeof NaN // 'number'
+
+/*operational rule*/
+NaN === NaN // false
+[NaN].indexOf(NaN) // -1(查找NaN元素)
+
+Boolean(NaN)
+
+NaN + 32 // NaN
+NaN - 32 // NaN
+NaN * 32 // NaN
+NaN / 32 // NaN
