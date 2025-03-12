@@ -1,0 +1,27 @@
+/*Convert a string to a floating-point number.*/
+parseFloat('3.14') // 3.14
+
+parseFloat('314e-2') // 3.14
+parseFloat('0.0314E+2') // 3.14
+
+parseFloat('3.14more non-digit characters') // 3.14
+
+parseFloat('\t\v\r12.34\n ') // 12.34
+
+parseFloat([]) // NaN
+parseFloat('FF2') // NaN
+parseFloat('') // NaN
+
+/*compare with Number*/
+parseFloat(true)  // NaN
+Number(true) // 1
+
+parseFloat(null) // NaN
+Number(null) // 0
+
+parseFloat('') // NaN
+Number('') // 0
+
+parseFloat('123.45#') // 123.45
+Number('123.45#') // NaN
+

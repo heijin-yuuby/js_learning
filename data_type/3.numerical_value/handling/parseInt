@@ -1,0 +1,17 @@
+/*convert string to integer*/
+parseInt('123') // 123
+parseInt('   81') // 81
+
+parseInt(1.23) // 1
+// 等同于
+parseInt('1.23') // 1
+
+parseInt('8a') // 8
+parseInt('12**') //12
+parseInt('abc') // NaN
+parseInt('.3') // NaN
+parseInt('') // NaN
+parseInt('+') // NaN
+parseInt('+1') // 1
+parseInt('0x10') // 16
+parseInt('011') // 11

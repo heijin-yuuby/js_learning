@@ -1,0 +1,12 @@
+The isNaN method can be used to determine whether a value is NaN.
+
+isNaN(NaN) // true
+isNaN(123) // false
+
+/*isNaN只对数值有效，如果传入其他值，会被先转成数值*/
+isNaN('abc') // true
+isNaN('123') // false
+isNaN(true) // false
+isNaN(null) // false
+isNaN(undefined) // true
+isNaN([]) // false
