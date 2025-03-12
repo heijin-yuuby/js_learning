@@ -18,7 +18,8 @@ node_modules/
 npm-debug.log
 yarn-debug.log
 yarn-error.log
-
+# others
+GIT_TUTORIAL.md
 # Only include specific folders and files
 /*
 !/1.0/
