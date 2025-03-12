@@ -17,13 +17,7 @@ This repository contains my JavaScript learning journey, including various examp
   - Integers and floating-point numbers
   - Boolean values
 
-## How to Use
 
-Each file contains specific examples and demonstrations of JavaScript concepts. You can run these files using Node.js:
-
-```bash
-node filename.js
-```
 
 ## Learning Progress
 
