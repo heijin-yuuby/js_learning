@@ -39,5 +39,5 @@ console.log(obj2);
 console.log(num1); 
 // 打印arr1，arr1引用的数组已被修改，所以会输出修改后的数组
 console.log(arr1); 
-// 打印subObj1，subObj1引用的对象已被修改，所以会输出修改后的对象
+//打印subObj1，subObj1引用的对象已被修改，所以会输出修改后的对象
 console.log(subObj1); 
