@@ -20,10 +20,10 @@ This repository contains my JavaScript learning journey, including various examp
 ## JavaScript Todo List (For Website Development)
 
 ### 1. JavaScript Core Concepts
-- [ ] Variables and Data Types
-- [ ] Control Flow (if/else, loops)
-- [ ] Functions and Scope
-- [ ] Arrays and Objects
+- [x] Variables and Data Types
+- [x] Control Flow (if/else, loops)
+- [x] Functions and Scope
+- [x] Arrays and Objects
 - [ ] ES6+ Features
   - Arrow functions
   - Template literals
