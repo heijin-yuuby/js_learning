@@ -16,6 +16,7 @@ This repository contains my JavaScript learning journey, including various examp
   - Null and undefined
   - Integers and floating-point numbers
   - Boolean values
+  - property
 
 ## JavaScript Todo List (For Website Development)
 
