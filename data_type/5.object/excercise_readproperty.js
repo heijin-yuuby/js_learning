@@ -12,5 +12,5 @@ for (let key in student) {
     }
 }
 
-// 以如下格式打印到控制台：属性名: 属性值
-// 例如：name: Lucy
+
+
