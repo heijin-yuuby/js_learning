@@ -7,9 +7,9 @@
 "Did she say \"Hello\"?"
 // "Did she say "Hello"?"
 
-'a
+/*'a
 b
-c'
+c'*/
 // SyntaxError: Unexpected token ILLEGAL,正确方式如下
 var longString = 'Long \
 long \

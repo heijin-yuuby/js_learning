@@ -1,9 +1,9 @@
 /*检查是否包含某个属性（键名）*/
 var obj = { p: 1 };
-'p' in obj // true
-console.log('toString' in obj) // true
+"p" in obj; // true
+console.log("toString" in obj); // true
 /*识别是否为对象自身属性*/
 var obj = {};
-if ('toString' in obj) {
-  console.log(obj.hasOwnProperty('toString')) // false
+if ("toString" in obj) {
+  console.log(obj.hasOwnProperty("toString")); // false
 }

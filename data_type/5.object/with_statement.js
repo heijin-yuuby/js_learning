@@ -12,7 +12,7 @@ obj.p1 = 4;
 obj.p2 = 5;
 
 // 例二
-with (document.links[0]){
+with (document.links[0]) {
   console.log(href);
   console.log(title);
   console.log(style);
@@ -28,10 +28,11 @@ with (obj) {
   p2 = 5;
 }
 
-obj.p1 // undefined
-p1 // 4，这个p1被创造
+obj.p1; // undefined
+p1; // 4，这个p1被创造
 /* 无法判断全局变量还是属性 */
-with(obj1.obj2.obj3) {//with（作用范围）
+with (obj1.obj2.obj3) {
+  //with（作用范围）
   console.log(p1 + p2);
 }
 
