@@ -10,13 +10,14 @@ This repository contains my JavaScript learning journey, including various examp
   - Switch statements
   - Break and continue statements
 
-- `2.0/`: Advanced JavaScript concepts
-  - Data types
+- `2.0/`: Data_type of JavaScript
   - Type checking
   - Null and undefined
-  - Integers and floating-point numbers
-  - Boolean values
-  - property
+  - numerical_value
+  - Strings
+  - Property
+  - Objects
+  - Functions
 
 ## JavaScript Todo List (For Website Development)
 
