@@ -16,3 +16,8 @@ for(let num of nums){
 }
 return sum;
 }
+/* 用concat合并数组 */
+function combineArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(combineArrays([1, 2, 3], [4, 5, 6]));

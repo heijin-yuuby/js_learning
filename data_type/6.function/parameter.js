@@ -73,4 +73,51 @@ function f(a, a) {
   }
   
   f(1) // 1
+
+  /* 5.arguments对象 */
+  var f = function (one) {
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2]);
+  }
+  
+  f(1, 2, 3)
+  // 1
+  // 2
+  // 3
+
+  var f = function(a, b) {
+    arguments[0] = 3;
+    arguments[1] = 2;
+    return a + b;
+  }
+  
+  f(1, 1) // 5,运行的时候修改参数，但是还是由函数内部对象定义决定结果
+
+  var f = function(a, b) {
+    'use strict'; // 开启严格模式
+    arguments[0] = 3;
+    arguments[1] = 2;
+    return a + b;
+  }
+  
+  f(1, 1) // 2,arguments对象不会影响实际参数
+
+  function f() {
+    return arguments.length;//可以看实际调用时带几个参数
+  }
+  
+  f(1, 2, 3) // 3
+  f(1) // 1
+  f() // 0
+
+  /* 让arguments使用数组方法 */
+  var args = Array.prototype.slice.call(arguments);
+
+// 或者
+var args = [];
+for (var i = 0; i < arguments.length; i++) {
+  args.push(arguments[i]);
+}
+  
   
