@@ -1,10 +1,16 @@
+/* 访问内部属性 */
 function counter() {
     let count = 0;
-    function increment() {
-        count++;
-        return count;
+    return{
+        increment:function increment(){
+            count++
+            return count;},    
+        
+        decrement:function decrement(){
+            count++
+            return count;}
+        }
     }
-    return increment;
-}
-let addOne = increment
-console.log(addOne)
+let addOne = counter()
+console.log(addOne.increment());
+console.log(addOne.decrement());
