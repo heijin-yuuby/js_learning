@@ -1,0 +1,19 @@
+/* 定义时赋值 */
+var arr = ['a', 'b', 'c'];
+
+/* 可放任何类型数据 */
+
+var arr =[
+    obj={a:1},
+    [1,2,3],
+    function combine(arr1,arr2){
+        return arr1.concat.arr2
+
+    }
+
+]
+console.log(arr[2])
+console.log(arr[1])
+
+typeof [1,2,3] //"object"
+
