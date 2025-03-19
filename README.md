@@ -21,7 +21,7 @@ This repository contains my JavaScript learning journey, including various examp
   - 7.Functions
   - 8.Arrays
 
-- `3`: Arithmetic operator
+- `3/`: Arithmetic operator
   - 
   - 
   -
