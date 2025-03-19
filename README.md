@@ -4,22 +4,28 @@ This repository contains my JavaScript learning journey, including various examp
 
 ## Directory Structure
 
-- `1.0/`: Basic JavaScript concepts
+- `1/`: Basic JavaScript concepts[finished]
 
   - Control flow (if-else, loops)
   - Variables and blocks
   - Switch statements
   - Break and continue statements
 
-- `2.0/`: Data_type of JavaScript
-  - Type checking
-  - Null and undefined
-  - numerical_value
-  - Strings
-  - Property
-  - Objects
-  - Functions
-  - Arrays
+- `2/`: Data_type of JavaScript[finished]
+  - 1.Type checking
+  - 2.Null and undefined
+  - 3.numerical_value
+  - 4.Strings
+  - 5.Property
+  - 6.Objects
+  - 7.Functions
+  - 8.Arrays
+
+- `3`: Arithmetic operator
+  - 
+  - 
+  -
+  - 
 
 ## JavaScript Todo List (For Website Development)
 
