@@ -1,42 +1,41 @@
 /* 检查某个键名是否存在 */
-var arr = [ 'a', 'b', 'c' ];
-2 in arr  // true
-'2' in arr // true
-4 in arr // false
+var arr = ["a", "b", "c"];
+2 in arr; // true
+"2" in arr; // true
+4 in arr; // false
 
-var arr=[];
-arr[9]='b';
+var arr = [];
+arr[9] = "b";
 
-9 in arr //true
-5 in arr //false
+9 in arr; //true
+5 in arr; //false
 /* 虽然可以但是不推荐用forin遍历数组，会把非整数键也遍历 */
-var a = [3,3,2,2]
-a.ashk ='sshea' ;
+var a = [3, 3, 2, 2];
+a.ashk = "sshea";
 
-for(var i in a){
-    console.log(a[i]);
+for (var i in a) {
+  console.log(a[i]);
 }
 
 /* for循环 */
-var b = [10,20]
-for(var i=0;i<b.length;i++)
-{
- console.log(b[i])}
- /* while循环 */
- var i=0;
- while(i<b.length){
-    console.log(b[i])
-    i++;
- }
- /* 逆向遍历 */
+var b = [10, 20];
+for (var i = 0; i < b.length; i++) {
+  console.log(b[i]);
+}
+/* while循环 */
+var i = 0;
+while (i < b.length) {
+  console.log(b[i]);
+  i++;
+}
+/* 逆向遍历 */
 var h = b.length;
-while(h --)
-{
-    console.log(b[h])
+while (h--) {
+  console.log(b[h]);
 }
 
 /* forEach遍历 */
-var colors = ['red', 'green', 'blue'];
+var colors = ["red", "green", "blue"];
 colors.forEach(function (color) {
   console.log(color);
 });

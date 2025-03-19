@@ -5,6 +5,7 @@ This repository contains my JavaScript learning journey, including various examp
 ## Directory Structure
 
 - `1.0/`: Basic JavaScript concepts
+
   - Control flow (if-else, loops)
   - Variables and blocks
   - Switch statements
@@ -18,10 +19,12 @@ This repository contains my JavaScript learning journey, including various examp
   - Property
   - Objects
   - Functions
+  - Arrays
 
 ## JavaScript Todo List (For Website Development)
 
 ### 1. JavaScript Core Concepts
+
 - [x] Variables and Data Types
 - [x] Control Flow (if/else, loops)
 - [x] Functions and Scope
@@ -34,6 +37,7 @@ This repository contains my JavaScript learning journey, including various examp
   - Modules
 
 ### 2. DOM Manipulation
+
 - [ ] Selecting Elements
 - [ ] Modifying Content and Attributes
 - [ ] Creating/Removing Elements
@@ -42,6 +46,7 @@ This repository contains my JavaScript learning journey, including various examp
 - [ ] Form Handling and Validation
 
 ### 3. Asynchronous JavaScript
+
 - [ ] Callbacks
 - [ ] Promises
 - [ ] Async/Await
@@ -50,6 +55,7 @@ This repository contains my JavaScript learning journey, including various examp
 - [ ] Error Handling
 
 ### 4. JavaScript for Web APIs
+
 - [ ] Local Storage
 - [ ] Session Storage
 - [ ] Cookies
@@ -57,6 +63,7 @@ This repository contains my JavaScript learning journey, including various examp
 - [ ] RESTful API Interaction
 
 ### 5. Modern JavaScript Development
+
 - [ ] NPM Package Management
 - [ ] Module Systems (import/export)
 - [ ] Basic Webpack Concepts
@@ -73,4 +80,4 @@ node filename.js
 
 ## Learning Progress
 
-This repository is continuously updated as I learn new JavaScript concepts and features. Check the commit history for the latest updates. 
+This repository is continuously updated as I learn new JavaScript concepts and features. Check the commit history for the latest updates.

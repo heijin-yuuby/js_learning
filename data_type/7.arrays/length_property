@@ -1,21 +1,20 @@
-['a','b','c'].length
+["a", "b", "c"].length;
 
 /* 动态性 */
-var arr = ['a','b'];
-arr.length //2
+var arr = ["a", "b"];
+arr.length; //2
 
-arr[9] = 'd';
-arr.length //10
+arr[9] = "d";
+arr.length; //10
 
 /* 可以限制数组长度，删除多余或增加 */
-var arr = [ 'a', 'b', 'c' ];
-arr.length // 3
+var arr = ["a", "b", "c"];
+arr.length; // 3
 
 arr.length = 2;
-arr // ["a", "b"]
+arr; // ["a", "b"]
 
-var a = ['a'];
+var a = ["a"];
 
 a.length = 3;
-a[1] // undefined，新增位置为空
-
+a[1]; // undefined，新增位置为空
