@@ -15,5 +15,12 @@ var arr =[
 console.log(arr[2])
 console.log(arr[1])
 
-typeof [1,2,3] //"object"
+typeof [1,2,3] //"object"，被认为是特殊的对象
+
+/* 用数值读取，实际上是读取键名，只不过数值被转成字符串 */
+var arr = ['a', 'b', 'c'];
+
+arr['0'] // 'a'
+arr[0] // 'a'
+
 
