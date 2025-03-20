@@ -15,13 +15,23 @@ var obj = {}
 
 /* Number（）原理 */
 var obj = {x:1};
-Number(obj)
+Number(obj)//NaN
 
 
 if(typeof obj.valueOf()==='object'){
-    Number(obj.toString());    
+    console.log(Number(obj.toString()));    
 }else{
-    Number(obj.valueOf())
+   console.log( Number(obj.valueOf()))
 }
 
+/* auto conversion */
+123 + 'abc' // "123abc"
 
+if ('abc') {
+    console.log('hello')
+  }  // "hello"
+
+  + {foo: 'bar'} // NaN
+  - [1, 2, 3] // NaN
+
+  
