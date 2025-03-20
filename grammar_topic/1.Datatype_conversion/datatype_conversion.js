@@ -6,6 +6,7 @@ Number(true)//1
 Number(false)//0
 Number(undefined)//NaN
 Number(null)//0
+
 /* 相对松弛 */
 parseInt('43 cats')//43
 
