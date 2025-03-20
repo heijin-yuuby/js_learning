@@ -24,7 +24,7 @@ if(typeof obj.valueOf()==='object'){
    console.log( Number(obj.valueOf()))
 }
 
-/* auto conversion */
+/* 自动转换 */
 123 + 'abc' // "123abc"
 
 if ('abc') {
@@ -34,4 +34,17 @@ if ('abc') {
   + {foo: 'bar'} // NaN
   - [1, 2, 3] // NaN
 
-  
+  //建议预期什么类型的值，就调用该类型的转换函数
+/* 自动转换为布尔值 */
+
+  if ( !undefined
+    && !null
+    && !0
+    && !NaN
+    && !''
+  ) {
+    console.log('true');
+  } // true
+
+expression ? true : false
+!! expression
