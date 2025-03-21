@@ -1,0 +1,12 @@
+/* throw用于手动中断程序执行，抛出错误 */
+var x = -1;
+if (x <= 0){
+    throw new Error('x必须为正数');
+}
+//Uncaught Error: x必须为正数
+
+function UserError(message){
+    this.message = message || '默认信息'
+    this.name = 'UserError'//来说明这个错误类型是否为UserError
+}
+throw new UserError('出错了！'); 
