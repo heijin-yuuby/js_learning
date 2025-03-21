@@ -1,0 +1,7 @@
+function UserError(message) {
+  this.message = message || '默认信息';
+  this.name = 'UserError';//this用于给UserError实例添加属性
+}
+
+UserError.prototype = new Error();
+UserError.prototype.constructor = UserError;
