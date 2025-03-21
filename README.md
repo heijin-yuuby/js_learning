@@ -21,7 +21,7 @@ This repository contains my JavaScript learning journey, including various examp
   - 7.Functions
   - 8.Arrays
 
-- `3/`: Grammar topic
+- `3/`: Grammar topic[in progress]
   - 1.Datatype_conversion
   - 2.Error_handling
   -
