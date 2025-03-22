@@ -26,7 +26,7 @@ console.log(222);
 var n = 100;
 
 try {
-  throw n;
+  throw n;//捕捉n值并把n赋值给e
 } catch (e) {
   if (e <= 50) {
     // ...
