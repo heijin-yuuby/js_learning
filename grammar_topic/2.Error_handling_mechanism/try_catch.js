@@ -21,3 +21,17 @@ try{
 console.log(222);
 //111
 //222
+
+/* 嵌套 */
+var n = 100;
+
+try {
+  throw n;
+} catch (e) {
+  if (e <= 50) {
+    // ...
+  } else {
+    throw e;
+  }
+}
+// Uncaught 100
