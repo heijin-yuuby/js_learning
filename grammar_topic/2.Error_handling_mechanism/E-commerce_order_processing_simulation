@@ -1,0 +1,56 @@
+const products = [
+    { id: 1, name: "T - Shirt", price: 19.99, quantity: 50 },
+    { id: 2, name: "Jeans", price: 49.99, quantity: 30 },
+    { id: 3, name: "Sneakers", price: 79.99, quantity: 20 }
+];
+const user = {
+    id: 101,
+    name: "Alice",
+    cart: [
+        { id: 1, quantity: 2 },
+        { id: 3, quantity: 1 }
+    ]
+}; 
+
+function processOrder(user) {
+    const products = [
+        { id: 1, name: "T - Shirt", price: 19.99, quantity: 50 },
+        { id: 2, name: "Jeans", price: 49.99, quantity: 30 },
+        { id: 3, name: "Sneakers", price: 79.99, quantity: 20 }
+    ];
+    let totalAmount = 0;
+
+    // 遍历用户购物车
+    user.cart.forEach((cartItem) => {
+        try {
+            // 在商品列表中查找对应的商品
+            const product = products.find(p => p.id === cartItem.id);
+
+            // 检查商品是否存在
+            if (!product) {
+                throw new Error(`商品 ${cartItem.id} 不存在`);
+            }
+
+            // 检查库存是否足够
+            if (product.quantity < cartItem.quantity) {
+                throw new Error(`商品 ${product.name} 库存不足，当前库存为 ${product.quantity}`);
+            }
+
+            // 库存足够，计算商品总价并更新库存
+            const itemTotal = product.price * cartItem.quantity;
+            totalAmount += itemTotal;
+            product.quantity -= cartItem.quantity;
+
+        } catch (e) {
+            console.log(e.message);
+            // 如果是库存不足的情况，将购物车中该商品数量设置为当前库存数量
+            if (e.message.includes('库存不足')) {
+                const productId = e.message.match(/商品 (\S+) 库存不足/)[1];
+                const targetCartItem = user.cart.find(ci => ci.id === parseInt(productId));
+                targetCartItem.quantity = products.find(p => p.id === parseInt(productId)).quantity;
+            }
+        }
+    });
+
+    console.log(`用户 ${user.name} 的订单总金额为 ${totalAmount}`);
+}
