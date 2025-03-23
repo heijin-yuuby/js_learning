@@ -1,0 +1,16 @@
+function f(){
+    try{
+        console.log("执行1");
+        throw'bug';
+    }catch(e){
+        console.log("执行2")
+        return true;//此时先不返回值，先执行finally模块
+        console.log("不执行3")
+    }finally{
+        console.log("会执行3")
+        return false;//此处返回了false，不执行catch剩下的
+        console.log("不会运行4")
+    }
+    console.log("不会执行5")
+}
+var result = f()
