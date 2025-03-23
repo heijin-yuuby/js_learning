@@ -1,0 +1,54 @@
+/* try_catch在最后添加一个finally代码块 */
+function cleanUp(){
+    try{
+        throw new Error('出错了')
+        console.log('次行不会执行');
+    }finally{
+        console.log('完成清理工作');
+    }
+}
+cleanUp()
+
+//发生错误后，因为没有catch就会中断执行，会先执行finally块，再向用户提示报错信息
+
+function idle(x){
+    try{
+        console.log(x);
+        return 'result';
+    }finally{
+        console.log('finally');
+    }
+}
+idle('hello')
+
+function idle(x){
+    try{
+        console.log(x);
+        return 'result';
+    }finally{
+        console.log('finally');
+    }
+}
+idle('hello')
+
+var count = 0;
+function countUp (){
+    try{
+        return count;
+    }finally{
+        count++;
+    }
+}
+console.log(countUp())
+
+/* 常见用法 */
+openFile();
+
+try{
+    writeFile(Data);
+}catch(e){
+    handleError(e);
+}finally{
+    closFile();
+}
+
