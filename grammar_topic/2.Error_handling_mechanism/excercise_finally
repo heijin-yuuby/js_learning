@@ -1,0 +1,30 @@
+function processData(dataArray){
+    let resultArray =[];
+    try{
+        if(Object.prototype.toString.call(dataArray)!=="[object Array]"){
+            throw new TypeError("输入参数不是数组类型")
+        }try{
+            for(let i = 0;i<dataArray.length;i++){
+                let num = Number(dataArray[i]);
+                if(num<0){
+                    throw new RangeError("数组中存在负数元素")
+                }
+                resultArray.push(num * num);
+            }
+        }catch(e){
+            console.log('捕捉到范围错误'+e.message)
+        }finally{
+            console.log("内部数据处理完成")
+        }
+    }catch(h){
+        console.log("捕捉到参数类型错误"+h.message)
+    }finally{
+        console.log("整体数据处理结束");
+        if(resultArray.length>0){
+            return resultArray
+        }else{
+            return null;
+        }
+        
+    }
+}
