@@ -1,0 +1,62 @@
+/* 基础应用 */
+function divide(a,b){
+    try{
+    if(typeof a!== 'number'||typeof b!=='number'){
+        throw new TypeError('not available value!')
+    }
+
+       if (typeof a!== 'number' || typeof b!== 'number') {
+            throw new TypeError('Parameters a and b must be numeric!');
+        }
+        return a/b;
+}catch(e){
+    console.log(e.message);
+
+}
+}
+
+console.log(divide(100,2));
+console.log(divide(a,bbb));
+
+/* 嵌套结构 */
+    function outerfunction(){
+        let obj = {name:'abcd'}
+        try{
+            console.log(obj.age);
+        }catch(e){
+            console.log("内部捕获错误");
+        }
+    }
+    try{
+        outerFunction();
+    }catch(e){
+        console.log("外部捕获错误");
+    }
+
+    /* 错误类型判断 */
+    function errorTester(input){
+            if(typeof input==='string'&&input.includes('invalid_syntax')){
+                throw new SyntaxError('syntax error')    
+            }else if(typeof input==='string'&&input.includes('undefined_variable')){
+                throw new ReferenceError('Referenced an undefined variable')
+            }
+            else if(typeof input !==s 'string'&& typeof input !=='number'){
+                throw new TypeError('The input type does not meet the requirements')
+            }
+            else{
+                console.log(`Untriggered error`);
+            }
+        }
+    try{
+        errorTester('*^*&');
+    }catch (e) {
+    if (e instanceof SyntaxError) {
+        console.log('捕获到语法错误：' + e.message);
+    } else if (e instanceof ReferenceError) {
+        console.log('捕获到引用错误：' + e.message);
+    } else if (e instanceof TypeError) {
+        console.log('捕获到类型错误：' + e.message);
+    } else {
+        console.log('捕获到其他类型的错误：' + e.message);
+    }
+}
