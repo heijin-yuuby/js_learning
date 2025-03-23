@@ -40,7 +40,7 @@ console.log(divide(a,bbb));
             }else if(typeof input==='string'&&input.includes('undefined_variable')){
                 throw new ReferenceError('Referenced an undefined variable')
             }
-            else if(typeof input !==s 'string'&& typeof input !=='number'){
+            else if(typeof input !== 'string'&& typeof input !=='number'){
                 throw new TypeError('The input type does not meet the requirements')
             }
             else{
