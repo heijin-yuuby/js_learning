@@ -35,3 +35,43 @@ if (a = b){
 
 }
 //减少了可读性
+
+/* 自增和自减 */
+++x
+//等同于
+
+x += 1;
+
+/* switch里每一个case最后一行必须是break，冗长 */
+function doAction(action) {
+    switch (action) {
+      case 'hack':
+        return 'hack';
+      case 'slash':
+        return 'slash';
+      case 'run':
+        return 'run';
+      default:
+        throw new Error('Invalid action.');
+    }
+  }
+//建议改写成用对象结构
+
+function doAction(acion){
+    var actions = {
+        'hack': function () {
+            return 'hack';
+        },
+        'slash': function () {
+            return 'slash';
+        },
+        'run': function () {
+            return 'run';
+        }
+    };
+
+    if (typeof actions[action] !== 'function'){
+        throw new Error('invalid action.');
+    }
+    return actions[action]();
+}
