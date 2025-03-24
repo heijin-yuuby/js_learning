@@ -1,0 +1,24 @@
+console.log(' %s + %s = %s', 1, 1, 2)
+// 1 + 1 = 2
+/* 
+%s 字符串
+%d 整数
+%i 整数
+%f 浮点数
+%o 对象的链接
+%c CSS 格式字符串 
+*/
+
+
+/* 使用 %s 占位符，对应参数是CSS，进行CSS渲染 */
+console.log(
+    '%cThis text is styled!',
+    'color: red; background: yellow; font-size: 24px;'
+  )
+
+
+/* 参数是对象时 */
+console.log({foo: 'bar'})
+// Object {foo: "bar"}
+console.log(Date)
+// function Date() { [native code] }
