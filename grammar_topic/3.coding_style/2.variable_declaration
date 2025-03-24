@@ -1,0 +1,37 @@
+/* JavaScript 会自动将变量声明“提升”（hoist）到代码块（block）的头部 */
+if (!x){
+    var x ={};//var x被提升到头部了
+}
+/* 更安全的写法 */
+for (var i = 0; i < 10; i++) {
+    // ...
+  }
+  
+  // 写成
+  var i;
+  for (i = 0; i < 10; i++) {
+    // ...
+  }
+
+  /* with可能造成混淆，不推荐使用 */
+  with (o) {
+    foo = bar;
+  }
+/* 可能的结果：o.foo = bar;
+o.foo = o.bar;
+foo = bar;
+foo = o.bar;*/
+
+
+/* 不建议合并 */
+a = b;
+if(a){
+
+}
+
+//写成
+
+if (a = b){
+
+}
+//减少了可读性
