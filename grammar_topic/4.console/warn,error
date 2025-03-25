@@ -1,0 +1,8 @@
+/* error方法在最前面有红色x，表示出错 */
+console.error('Error: %s (%i)', 'Server is not responding', 500)
+// Error: Server is not responding (500)
+
+/* warn前面加黄色三角，表示警告 */
+console.warn('Warning! Too few nodes (%d)', document.childNodes.length)
+// Warning! Too few nodes (1)
+
