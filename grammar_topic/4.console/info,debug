@@ -1,0 +1,14 @@
+  ['log', 'info', 'warn', 'error'].forEach(function(method) {
+    console[method] = console[method].bind(
+      console,
+      new Date().toISOString()
+    );
+  });
+
+  console.log("出错了！");
+  
+
+console.log("测试 console.log 是否可用");
+console.info("测试 console.info 是否可用");
+console.warn("测试 console.warn 是否可用");
+console.error("测试 console.error 是否可用");
