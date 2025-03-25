@@ -1,0 +1,8 @@
+/* 将复合型的数据转为表格显示 */
+var languages = [
+  { name: "JavaScript", fileExtension: ".js" },
+  { name: "TypeScript", fileExtension: ".ts" },
+  { name: "CoffeeScript", fileExtension: ".coffee" }
+];
+
+console.table(languages);
