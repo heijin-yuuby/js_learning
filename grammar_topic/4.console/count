@@ -1,0 +1,18 @@
+/* 该方法可以接受一个字符串作为参数，作为标签，对执行次数进行分类。 */
+function greet(user) {
+  console.count(user);
+  return "hi" + user;
+}
+
+greet('bob')
+// bob: 1
+// "hi bob"
+
+greet('alice')
+// alice: 1
+// "hi alice"
+
+greet('bob')
+// bob: 2
+// "hi bob"
+

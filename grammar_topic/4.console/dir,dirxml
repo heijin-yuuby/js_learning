@@ -1,0 +1,9 @@
+/* dir用来对一个对象进行检查（inspect)，易于阅读和打印的格式显示 */
+console.log({f1: 'foo', f2: 'bar'})
+// Object {f1: "foo", f2: "bar"}
+
+console.dir({f1: 'foo', f2: 'bar'})
+// Object
+//   f1: "foo"
+//   f2: "bar"
+//   __proto__: Object
