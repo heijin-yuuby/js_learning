@@ -1,0 +1,50 @@
+//以下只能在浏览器控制台调试
+
+/* $_属性返回上一个表达式的值 */
+2 + 2
+//4
+$_
+//4
+
+/* $0-$4,控制台保存了最近5个在element面板中选中的DOM元素，
+$0为倒数第一个,$1为倒数第二个 */
+
+/* $(selector)返回第一个匹配的元素，
+等同于document.querySelector()。注意，如果页面脚本对$有定义，
+则会覆盖原始的定义。比如，页面里面有 jQuery，
+控制台执行$(selector)就会采用 jQuery 的实现，返回一个数组 */
+
+/* $x(path)返回一个数组，包含匹配特定Xpath表达式的所有DOM元素 */
+$x("//p[a]")
+//返回所有包含a元素的p元素
+
+/* inspext(object) 
+方法打开相关面板，
+并选中相应的元素，显示它的细节。DOM 元素在Elements面板中显示，
+比如inspect(document)会在 Elements 面板显示document元素。
+JavaScript 对象在控制台面板Profiles面板中显示，
+比如inspect(window)*/
+
+/* getEventListeners(object)
+ 方法返回一个对象，该对象的成员为object登记了回调函数的各种事件
+ （比如click或keydown），每个事件对应一个数组，
+ 数组的成员为该事件的回调函数。*/
+
+/* keys(object)返回一个数组，包含object的所有键名
+values（object）返回包含的所有键值 */
+var o = {'p1':'a','p2':'b'};
+
+keys(o)
+// ["p1", "p2"]
+values(o)
+// ["a", "b"]
+
+/* monitorEvents(object[,events])
+unmonitorEvents(object[,events]) 
+monitorEvents(object[, events])方法监听特定对象上发生的特定事件。
+事件发生时，会返回一个Event对象，包含该事件的相关信息。
+unmonitorEvents方法用于停止监听
+
+ */
+monitorEvents(window, "resize");
+monitorEvents(window, ["resize", "scroll"])
