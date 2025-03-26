@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xPath演示</title>
+</head>
+<body>
+    <p>这是一个普通段落</p>
+    <p><a href="#">包含链接的段落</a></p>
+    <p>另一个普通段落</p>
+    <p><a href="#">又一个包含链接的段落</a></p>
+
+    <script>
+        // 这里无法直接在script标签内使用$x方法，需要在浏览器控制台运行
+        // 以下为在控制台运行的示例解释
+        // 在浏览器控制台输入$x("//p[a]")
+        // 浏览器会查找页面中所有包含a元素的p元素
+        // 然后返回一个包含这些匹配元素的数组
+        // 假设上述HTML页面在浏览器打开，在控制台输入$x("//p[a]")后
+        // 会返回两个p元素，因为有两个段落包含a元素
+    </script>
+</body>
+</html>
+
+控制台：$x("//p[a]")
+(2) [p, p]
+
