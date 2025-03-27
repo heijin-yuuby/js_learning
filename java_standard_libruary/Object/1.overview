@@ -1,0 +1,31 @@
+/* Object对象本身的方法 */
+Object.print = function (o) { console.log(o)};
+//直接定义在Object对象的方法
+
+/* Object实例方法 */
+Object.prototype.print = function () {
+    console.log(this);
+};
+
+var obj = new Object ();
+obj.print ()
+
+/* 常用的静态方法:Object.assign() */
+const defaultConfig = { color: 'red', size:'medium'}
+const userConfig = {color:'green', size:'large'}
+const finalConfig = Object.assign({},defaultConfig,userConfig);
+console.log(finalConfig)
+//用于合并多个配置对象
+
+/* Object.create() */
+const myArray = Object.create(Array.prototype);
+myArray.push(1, 2, 3);
+console.log(myArray); // [1, 2, 3]
+//创建新对象，以指定的对象为原型
+
+/* Object.freeze() */
+const li = Object.freeze({vlaue:888})
+li.vlaue = 222;
+console.log(li.vlaue)
+//保护常量对象
+
