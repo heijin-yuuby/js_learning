@@ -1,0 +1,13 @@
+var obj = Object();
+//等同于
+var obj = Object(undefined);
+var obj = Object(null);
+
+obj instanceof Object //true，代表obj对象为Object的实例
+var obj = Object(1);
+obj instanceof Object //true
+obj instanceof Number //true
+
+var obj = Object('foo');
+obj instanceof Object //true
+obj instanceof Number //true
