@@ -29,3 +29,13 @@ li.vlaue = 222;
 console.log(li.vlaue)
 //保护常量对象
 
+/* Object实例方法:obj.valueOf() */
+const myObject = { valueOf: function () {return 5;}};
+//获取对象的原始值
+
+/*obj.toString()*/
+const user = { name: 'John', age: 30 };
+console.log('用户信息：' + user.toString()); 
+// 用户信息：[object Object]，默认情况下返回这样的字符串，如果user对象重写了toString方法，
+// 则会返回重写后的结果
+
