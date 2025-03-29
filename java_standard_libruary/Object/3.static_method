@@ -1,0 +1,15 @@
+/* .keys参数是对象，返回一个数组，数组成员都是该对象自身的所有属性名 */
+var obj = {
+  p1: 123,
+  p2: 456
+};
+
+Object.keys(obj) // ["p1", "p2"]
+
+/* 同上，只返回可枚举的属性 */
+var obj = {
+    p1: 123,
+    p2: 456
+  };
+  
+  Object.getOwnPropertyNames(obj) // ["p1", "p2"]
