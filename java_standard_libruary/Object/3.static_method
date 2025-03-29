@@ -13,3 +13,18 @@ var obj = {
   };
   
   Object.getOwnPropertyNames(obj) // ["p1", "p2"]
+
+//length是不可枚举的
+var a = ['Hello', 'World'];
+
+Object.keys(a) // ["0", "1"]
+Object.getOwnPropertyNames(a) // ["0", "1", "length"]
+
+//替代方案
+var obj = {
+  p1: 123,
+  p2: 456
+};
+
+Object.keys(obj).length // 2
+Object.getOwnPropertyNames(obj).length // 2
