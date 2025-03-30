@@ -1,0 +1,10 @@
+/* 属性描述对象 */
+{
+    value: 123,//该属性的属性值，默认为undefined
+    writable: flase//布尔值，表示属性值是否可改变，默认为ture
+    enumerable: true//布尔值，表示该属性是否可遍历，默认为true
+    configurable: false,//布尔值，表示属性的可配置性
+    get: undefined,//get为函数，表示该属性的取值函数
+    set: undefined//表示该属性的存值函数
+}
+

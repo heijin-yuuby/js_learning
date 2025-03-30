@@ -28,3 +28,4 @@ var obj = {
 
 Object.keys(obj).length // 2
 Object.getOwnPropertyNames(obj).length // 2
+
