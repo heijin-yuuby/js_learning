@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter和Setter操作样式</title>
+</head>
+
+<body>
+    <div id="myDiv" style="width: 100px; height: 100px; background-color: red;"></div>
+    <script>
+        const myDiv = document.getElementById('myDiv');
+        //
+        const divStyle = {
+            _width: null,
+            get width() {
+                return window.getComputedStyle(myDiv).width;
+            },
+            set width(newWidth) {
+                if (typeof newWidth === 'number') {
+                    myDiv.style.width = newWidth + 'px';
+                } else {
+                    console.error('宽度必须是数字');
+                }
+            }
+        };
+        console.log(divStyle.width); // 获取div的当前宽度
+        divStyle.width = 200; // 设置div的宽度为200px
+    </script>
+</body>
+
+</html>
+
+处理表单数据
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter和Setter处理表单数据</title>
+</head>
+
+<body>
+    <input type="text" id="ageInput" placeholder="请输入年龄">
+    <button onclick="validateAge()">提交</button>
+    <script>
+        const ageInput = document.getElementById('ageInput');//获取到id为ageinput的输入框元素，将其存储在ageinput变量中
+        const user = {
+            _age: null,
+            get age() {
+                return this._age;
+            },
+            set age(newAge) {
+                const numAge = parseInt(newAge, 10);
+                if (!isNaN(numAge) && numAge >= 0 && numAge <= 150) {
+                    //条件“不是NaN，大于等于0，小于等于150”
+                    this._age = numAge;
+                } else {
+                    console.error('年龄必须是0到150之间的有效数字');
+                }
+            }
+        };
+        function validateAge() {
+            user.age = ageInput.value;//将输入框的值赋给user.age，会出发setter函数
+            if (user.age!== null) {
+                console.log(`输入的有效年龄是: ${user.age}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
