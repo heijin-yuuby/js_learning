@@ -1,0 +1,52 @@
+/* 定制属性读写行为 */
+var obj = Object.defineProperty({}, 'p', {
+    get: function () {
+      return 'getter';//getter函数用于返回该属性的值
+    },
+    set: function (value) {
+      console.log('setter: ' + value);//用于将新的值赋给对象的内部属性
+    }
+  });
+  
+  obj.p // "getter"
+  obj.p = 123 // "setter: 123"
+
+/* 属性存取控制 */
+let person = {
+    _age:0,//内部属性，不希望外部直接访问
+    //getter函数
+    get age() {
+        return this._age;
+    },
+    //定义setter函数
+    set age(newAge){
+        if (typeof newAge === 'number' && newAge >= 0){
+            this._age = newAge
+        } else {
+            console.log("a valid value")
+        }
+    }
+};
+
+person.age = 25;
+console.log(person.age);
+
+person.age = "thirty";
+console.log(person.age);
+
+/* 计算属性 */
+let rectangle = {
+  _width: 5,
+  _height: 3,
+  //定义计算属性
+  get area() {
+    return this._width * this._height;    
+  },
+  //setter函数
+  set area(newArea) {
+    console.log("mentioned")
+  }
+};
+console.log(rectangle.area);
+rectangle.area = 20;
+
