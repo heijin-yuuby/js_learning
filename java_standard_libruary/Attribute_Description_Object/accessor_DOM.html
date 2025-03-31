@@ -52,6 +52,7 @@
             get age() {
                 return this._age;
             },
+            //setter接收到输入的数据后进行判断
             set age(newAge) {
                 const numAge = parseInt(newAge, 10);
                 if (!isNaN(numAge) && numAge >= 0 && numAge <= 150) {
