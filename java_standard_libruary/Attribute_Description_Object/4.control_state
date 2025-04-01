@@ -1,1 +1,85 @@
-/* Object.preventExtensions */
+/* Object.preventExtensions，比较弱，仅无法添加新属性 */
+var obj = new Object();
+Object.preventExtensions(obj);
+
+Object.defineProperty(obj, 'p', {
+    value: 'hello'
+});
+
+obj.p = 1;
+obj.p //undefined   
+
+/* Object.isExtensible() 用于检查是否可以为该对象添加属性*/
+var obj = new Object();
+
+Object.isExtensible(obj) //true，可以添加
+Object.preventExtensions(obj);
+Object.isExtensible(obj) //false,不能添加
+
+/* Object.seal()，中等强度，无法添加新属性，也无法删除旧属性 */
+var obj = { p: 'hello'};
+Object.seal(obj);
+
+delete obj.p;
+obj.p//"hello"，删除失败
+
+obj.x = 'world';
+obj.x //underfined，添加失败
+
+/* 实质是把属性描述对象的configurable设为false */
+var obj = {
+    p: 'a'
+  };
+  
+  // seal方法之前
+  Object.getOwnPropertyDescriptor(obj, 'p')
+  // Object {
+  //   value: "a",该属性的值
+  //   writable: true,可改写性
+  //   enumerable: true,可遍历性
+  //   configurable: true，可配置性
+  // }
+  
+  Object.seal(obj);
+  
+  // seal方法之后
+  Object.getOwnPropertyDescriptor(obj, 'p')
+  // Object {
+  //   value: "a",
+  //   writable: true,
+  //   enumerable: true,
+  //   configurable: false，不能随意更改该属性，也不能改变除value之外的元属性
+  // }
+  
+  Object.defineProperty(obj, 'p', {
+    enumerable: false
+  })
+  // TypeError: Cannot redefine property: p
+
+/* Object.isSealed()，用于检查是否使用了Object.seal(是否可以增删属性) */
+var obj = { p:'a'};
+
+Object.seal(obj);
+Object.isSealed(obj) //true
+
+var obj = { p: 'a' };
+
+Object.seal(obj);
+Object.isExtensible(obj) // false,同样返回false
+
+/* freeze,结合seal，且不可改变属性值 */
+
+var obj = {
+  p: 'hello'
+};
+
+Object.freeze(obj);
+
+obj.p = 'world';
+obj.p // "hello"
+
+obj.t = 'hello';
+obj.t // undefined
+
+delete obj.p // false
+obj.p // "hello"
