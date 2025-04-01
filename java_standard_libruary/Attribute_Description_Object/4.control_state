@@ -83,3 +83,37 @@ obj.t // undefined
 
 delete obj.p // false
 obj.p // "hello"
+/* 是否最高级禁止 */
+var obj = {
+  p: 'hello'
+};
+
+Object.freeze(obj);
+Object.isFrozen(obj) // true
+
+/* 漏洞,通过改变原型对象来增加属性 */
+var obj = new Object();
+Object.preventExtensions(obj);
+
+var proto = Object.getPrototypeOf(obj);
+proto.t = 'hello';
+obj.t
+// hello
+//可以把原型也冻住
+var obj = new Object();
+Object.preventExtensions(obj);
+
+var proto = Object.getPrototypeOf(obj);
+Object.preventExtensions(proto);
+
+proto.t = 'hello';
+obj.t // undefined
+//如果属性值是对象，只能冻结属性指向的对象
+var obj = {
+  foo: 1,
+  bar: ['a', 'b']
+};
+Object.freeze(obj);
+
+obj.bar.push('c');
+obj.bar // ["a", "b", "c"]
