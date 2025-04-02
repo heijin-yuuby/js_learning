@@ -1,0 +1,37 @@
+/* valueOf()，返回数组本身 */
+var arr = [1, 2, 3];
+arr.valueOf(); //[1,2,3]
+
+/* toString(),返回数组的字符串形式 */
+var arr = [1, 2, 3];
+arr.toString(); // "1,2,3"
+
+/* push(),pop() */
+var arr = [];
+
+arr.push(1); //1
+arr.push("a"); //'a'
+
+arr.pop(); //用于删除最后一个元素
+arr; // [1]
+
+var a = ["a", "b", "c"];
+a.shift(); //用于删除数组第一个元素
+
+var list = [1, 2, 3, 4];
+var item;//用于存储从数组中取出的元素
+
+while ((item = list.shift())) {
+  console.log(item);//打印每次取出的元素
+}
+
+list; // [],但是这样的方法表明一旦item=0，就会停止遍历
+
+var a = ['a','b','c'];
+
+a.unshift('x');
+
+
+var arr = ['c','d'];
+arr.unshift('a','b')//在数组的第一个位置添加元素
+arr//['a','b','c','d']
