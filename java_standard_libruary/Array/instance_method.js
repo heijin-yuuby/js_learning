@@ -43,8 +43,20 @@ a.join('')// '1 2 3 4'
 a.join(' | ')//"1 | 2 | 3 | 4"
 a.join()//"1,2,3,4"
 
+/* 数组成员是undefined或null或空，会被转为空字符串 */
 [undefined, null].join('#')
 // "#"
 
 ['a','b'].join('-')
 //'a-b'
+
+Array.prototype.join.call('hello','-')
+// "h-e-l-l-o"
+
+var obj = {0:'a',1:'b',length: 2 };
+Array.prototype.join.call(obj,'-')
+
+
+/* concat()用于多个数组的合并 */
+[1,2,3].concat( 4, 5, 6)
+// [1,2,3,4,5,6]
