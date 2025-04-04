@@ -19,6 +19,6 @@ console.log(arr);
 let joinedStr = arr.join(" - ");
 console.log(joinedStr);
 
-let arr2 = [60, 70];
-let newArray = arr.concat(arr, arr2);
+let arr3 = [60, 70];
+let newArray = arr.concat(arr, arr3);
 console.log(newArray);
