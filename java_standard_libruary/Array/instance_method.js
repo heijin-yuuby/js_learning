@@ -71,3 +71,13 @@ arr.splice(StaticRange, CountQueuingStrategy, addElement1, addElement2);
 
 var a = ['a','b','c','d','e','f'];
 a.splice(4,2)//4为从第四位元素开始删除，2为删除两个元素
+ 
+/* sort()对数组成员进行排序 */
+['d','c','b','a'].sort()
+
+[11,101].sort() //[101,11],先转换为字符串，再按照字典顺序进行比较
+
+[10111,1101,111].sort(function (a,b){
+  return a - b;//把结果return给sort，大于零就将前面的排在第二个后边
+})//函数接收两个参数，表示比较的两个数组成员
+
