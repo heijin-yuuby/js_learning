@@ -81,3 +81,25 @@ a.splice(4,2)//4为从第四位元素开始删除，2为删除两个元素
   return a - b;//把结果return给sort，大于零就将前面的排在第二个后边
 })//函数接收两个参数，表示比较的两个数组成员
 
+/* map() */
+var numbers = [1,2,3];
+
+numbers.map(function (n) {
+    return n + 1;
+});
+
+console.log(numbers)
+
+[1, 2, 3].map(function(elem, index, arr) {
+  return elem * index;
+});
+
+/* forEach() */
+function log(element, index, array) {
+  console.log('[' + index + '] = ' + element);
+}
+
+[2, 5, 9].forEach(log);
+// [0] = 2
+// [1] = 5
+// [2] = 9
