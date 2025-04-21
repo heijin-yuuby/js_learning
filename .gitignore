@@ -28,6 +28,7 @@ GIT_TUTORIAL.md
 !/java_standard_libruary/
 !README.md
 !GIT_TUTORIAL.md
+!/vue/
 
 # Ignore documentation
 /docs/ 
