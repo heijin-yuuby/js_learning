@@ -5,7 +5,7 @@ const count = ref(2)
 const previousCount = ref(count.value);//用于记录上一次的 count
 
 const alwaysSmall = computed(() => {
-    if (count.value <= 3) {
+    if (count.value <= 5) {
         previousCount.value = count.value
         return count.value
     }
