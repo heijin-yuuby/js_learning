@@ -14,6 +14,9 @@ const alwaysSmall = computed(() => {
         count.value++;
     }
 })
+const incrementCount = () => {
+  count.value++;
+};
 </script>
 
 <template>
