@@ -21,7 +21,7 @@
       const hasError = ref(false);
       const fontSize = ref(16);
       const textColor = ref('black');
-  
+  //设置绑定值的状态
       const toggleActive = () => {
         isActive.value =!isActive.value;
       };
